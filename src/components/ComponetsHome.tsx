@@ -7,6 +7,8 @@ import {
   Image,
 } from "react-native";
 import { Feather, Entypo, Fontisto } from "@expo/vector-icons";
+import BlurView from 'react-native-blur';
+
 
 export default function HomeComponets() {
   return (
@@ -19,17 +21,22 @@ export default function HomeComponets() {
           </Text>
         </TouchableOpacity>
       </View>
-
       <ScrollView horizontal={true}>
         <View style={styles.reseta}>
           <View>
-          <Entypo name="star" style={styles.str} />
+
             <Image
               source={{
                 uri: "https://assets.unileversolutions.com/recipes-v2/231719.jpg",
               }}
+
               style={styles.img}
             />
+            <View style={styles.bgfavorite} >
+            <Fontisto name="favorite" style={styles.favorite} />
+            </View>
+            <Text style={styles.str}><Entypo name="star" size={25} color='white'/>4.4</Text>
+            <Text style={styles.time} >5:10</Text>
             <View style={styles.bgplay} >
               <Fontisto name="play" style={styles.play} />
             </View>
@@ -60,6 +67,11 @@ export default function HomeComponets() {
               }}
               style={styles.img}
             />
+            <View style={styles.bgfavorite} >
+            <Fontisto name="favorite" style={styles.favorite} />
+            </View>
+            <Text style={styles.str}><Entypo name="star" size={25} color='white'/>4.4</Text>
+            <Text style={styles.time} >5:10</Text>
             <View style={styles.bgplay} >
               <Fontisto name="play" style={styles.play} />
             </View>
@@ -111,27 +123,55 @@ const styles = StyleSheet.create({
   },
   bgplay: {
     borderRadius:50,
-    padding:20,
-    backgroundColor: 'rgba(12, 12, 12, 0.5)',
+    padding:23,
+    backgroundColor: 'rgba(25, 20, 20, 0.5)',
     position: "absolute",
     left: 115,
     top: 60,
   },
+  bgfavorite: {
+    borderRadius:50,
+    backgroundColor: 'rgb(250,250,250)',
+    position: "absolute",
+    left: 255,
+    top: 10,
+  },
   play: {
-    fontSize: 25,
+    fontSize: 20,
     color: "white",
   },
+  favorite: {    
+    paddingVertical:10,
+    paddingHorizontal:15,
+    fontSize: 20,
+    color: "black",
+  },
   str: {
-    fontSize:50,
-    color:'black',
+    fontSize:20,
+    color:'white',
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: 'rgba(52, 52, 52, 0.8)',
-    width: "30%",
-    borderRadius: 15,
+    backgroundColor: 'rgba(25,25,20,0.5)',
+    width: "20%",
+    filter:0,
+    borderRadius: 8,
+    padding:2,
     position: 'absolute',
-    left: 20,
-    top: 20
+    left: 10,
+    top: 10
+  },
+  time: {
+    fontSize:20,
+    color:'white',
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: 'rgba(20, 20, 20,0.4)',
+    borderRadius: 8,
+    paddingVertical:2,
+    paddingHorizontal:10,
+    position: 'absolute',
+    left: 240,
+    top: 160
   },
   end: {
     margin: 10,
