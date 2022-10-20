@@ -1,8 +1,8 @@
-import {View } from 'react-native';
+import {View,Text, } from 'react-native';
 export default function Perfil() {
   return (
-    <View>
-
+    <View style={{}}>
+      <Text>Perfil</Text>
     </View>
   );
 }

@@ -19,7 +19,7 @@ const Input = () => {
 const styles =StyleSheet.create({
     search:{
       borderWidth: 1,
-      borderRadius:10,
+      borderRadius:15,
       paddingVertical:10,
       flexDirection:'row',
       margin:20,
@@ -29,7 +29,7 @@ const styles =StyleSheet.create({
       marginLeft:10,
     },
     input:{
-      fontSize:15,
+      fontSize:20,
       paddingLeft:10,
       paddingRight:'50%',
     },
