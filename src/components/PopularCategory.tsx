@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
-
+import Category from "./Category";
 function Popular() {
   return (
     <View style={{ marginLeft: 20 }}>
@@ -28,6 +28,9 @@ function Popular() {
           </TouchableOpacity>
         </View>
       </ScrollView>
+      <View>
+          <Category/>
+        </View>
     </View>
   );
 }
