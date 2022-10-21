@@ -7,7 +7,6 @@ import {
   Image,
 } from "react-native";
 import { Feather, Entypo, Fontisto } from "@expo/vector-icons";
-import BlurView from 'react-native-blur';
 
 
 export default function HomeComponets() {
@@ -21,6 +20,7 @@ export default function HomeComponets() {
           </Text>
         </TouchableOpacity>
       </View>
+      
       <ScrollView horizontal={true}>
         <View style={styles.reseta}>
           <View>
