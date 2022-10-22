@@ -52,6 +52,7 @@ function Category() {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   breackfast: {
     flex: 1,

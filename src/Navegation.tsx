@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 // screen
 import Home from "./screen/Home";
 import Perfil from "./screen/Perfil";
+import perfilcomponent from "./components/perfilcomponent";
 import Add from "./screen/Add";
 import Guardadas from "./screen/Guardadas";
 import Detalle from "./screen/Detalle";

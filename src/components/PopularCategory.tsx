@@ -6,6 +6,7 @@ import {
   StyleSheet,
 } from "react-native";
 import Category from "./Category";
+import perfilcomponent from '../components/Category'
 function Popular() {
   return (
     <View style={{ marginLeft: 20 }}>
@@ -30,6 +31,7 @@ function Popular() {
       </ScrollView>
       <View>
           <Category/>
+          
         </View>
     </View>
   );

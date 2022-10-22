@@ -20,7 +20,7 @@ export default function HomeComponets() {
           </Text>
         </TouchableOpacity>
       </View>
-      
+
       <ScrollView horizontal={true}>
         <View style={styles.reseta}>
           <View>
@@ -33,9 +33,9 @@ export default function HomeComponets() {
               style={styles.img}
             />
             <View style={styles.bgfavorite} >
-            <Fontisto name="favorite" style={styles.favorite} />
+              <Fontisto name="favorite" style={styles.favorite} />
             </View>
-            <Text style={styles.str}><Entypo name="star" size={25} color='white'/>4.4</Text>
+            <Text style={styles.str}><Entypo name="star" size={25} color='white' />4.4</Text>
             <Text style={styles.time} >5:10</Text>
             <View style={styles.bgplay} >
               <Fontisto name="play" style={styles.play} />
@@ -68,9 +68,9 @@ export default function HomeComponets() {
               style={styles.img}
             />
             <View style={styles.bgfavorite} >
-            <Fontisto name="favorite" style={styles.favorite} />
+              <Fontisto name="favorite" style={styles.favorite} />
             </View>
-            <Text style={styles.str}><Entypo name="star" size={25} color='white'/>4.4</Text>
+            <Text style={styles.str}><Entypo name="star" size={25} color='white' />4.4</Text>
             <Text style={styles.time} >5:10</Text>
             <View style={styles.bgplay} >
               <Fontisto name="play" style={styles.play} />
@@ -122,15 +122,15 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   bgplay: {
-    borderRadius:50,
-    padding:23,
+    borderRadius: 50,
+    padding: 23,
     backgroundColor: 'rgba(25, 20, 20, 0.5)',
     position: "absolute",
     left: 115,
     top: 60,
   },
   bgfavorite: {
-    borderRadius:50,
+    borderRadius: 50,
     backgroundColor: 'rgb(250,250,250)',
     position: "absolute",
     left: 255,
@@ -140,35 +140,35 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "white",
   },
-  favorite: {    
-    paddingVertical:10,
-    paddingHorizontal:15,
+  favorite: {
+    paddingVertical: 10,
+    paddingHorizontal: 15,
     fontSize: 20,
     color: "black",
   },
   str: {
-    fontSize:20,
-    color:'white',
+    fontSize: 20,
+    color: 'white',
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: 'rgba(25,25,20,0.5)',
     width: "20%",
-    filter:0,
+    filter: 0,
     borderRadius: 8,
-    padding:2,
+    padding: 2,
     position: 'absolute',
     left: 10,
     top: 10
   },
   time: {
-    fontSize:20,
-    color:'white',
+    fontSize: 20,
+    color: 'white',
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: 'rgba(20, 20, 20,0.4)',
     borderRadius: 8,
-    paddingVertical:2,
-    paddingHorizontal:10,
+    paddingVertical: 2,
+    paddingHorizontal: 10,
     position: 'absolute',
     left: 240,
     top: 160
