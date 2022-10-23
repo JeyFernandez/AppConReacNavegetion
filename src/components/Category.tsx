@@ -4,22 +4,19 @@ import { FontAwesome5, Entypo, Fontisto } from "@expo/vector-icons";
 function Category() {
   return (
     <View style={styles.breackfast}>
-      <View style={styles.container2}>x
+      <View style={styles.container2}>
         <View style={styles.circle}>
           <Image
             style={styles.breack}
-            source={{
-              uri: "https://cdn.immieats.com/ee52ac03-5070-4a6d-8d56-0804ae15cd3d/-/format/auto/-/quality/better/-/max_icc_size/10/-/resize/1000x/"}}
+            source={ require('../img/ensalada.jpeg')}
           />
         </View>
         <View style={styles.txt2}>
           <Text style={styles.txt}>Pepper aweetcorn</Text>
           <Text style={styles.txt}>ramen</Text>
         </View>
-        <View>
-          <Text style={styles.time}> Time</Text>
-        </View>
-        <View>
+        <View style={styles.time}>
+          <Text > Time</Text>
           <Text style={styles.time2}> 10 Mins</Text>
           <View style={styles.fevt}>
             <FontAwesome5 name="bookmark" size={20} color="gray" />
@@ -39,10 +36,29 @@ function Category() {
           <Text style={styles.txt}>Pepper aweetcorn</Text>
           <Text style={styles.txt}>ramen</Text>
         </View>
-        <View>
-          <Text style={styles.time}> Time</Text>
+        <View style={styles.time}>
+          <Text > Time</Text>
+          <Text style={styles.time2}> 10 Mins</Text>
+          <View style={styles.fevt}>
+            <FontAwesome5 name="bookmark" size={20} color="gray" />
+          </View>
         </View>
-        <View>
+      </View>
+{/*  */}
+      <View style={styles.container2}>
+        <View style={styles.circle}>
+          <Image
+            style={styles.breack}
+            source={{
+              uri: "https://cdn.immieats.com/ee52ac03-5070-4a6d-8d56-0804ae15cd3d/-/format/auto/-/quality/better/-/max_icc_size/10/-/resize/1000x/"}}
+          />
+        </View>
+        <View style={styles.txt2}>
+          <Text style={styles.txt}>Pepper aweetcorn</Text>
+          <Text style={styles.txt}>ramen</Text>
+        </View>
+        <View style={styles.time}>
+          <Text > Time</Text>
           <Text style={styles.time2}> 10 Mins</Text>
           <View style={styles.fevt}>
             <FontAwesome5 name="bookmark" size={20} color="gray" />
@@ -85,7 +101,7 @@ const styles = StyleSheet.create({
   txt2: {
     alignItems: "center",
     position: "absolute",
-    left: 25,
+    left: 20,
     top: 60,
   },
   txt: {
@@ -103,19 +119,19 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "bold",
     color: "black",
-    top: 130,
+    top: 10,
     left: 10,
   },
   fevt: {
     backgroundColor: "white",
-    width: "15%",
+    width: "18%",
     height: 30,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
     position: "absolute",
-    right: 10,
-    top: 120,
+    right: 20,
+    top: 15,
   },
 });
 export default Category;

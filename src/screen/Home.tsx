@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <View style={styles.containerNav}>
       <ScrollView>
-      <StatusBar
+      <StatusBar 
         animated={true}
         backgroundColor='white' />
       <View >
