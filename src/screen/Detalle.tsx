@@ -32,7 +32,7 @@ const Detalle = () => {
             </View>
           </View>
           <View style={styles.end}>
-            <Text style={styles.text}>How to make sushi at home</Text>
+            <Text style={styles.text}>Como hacer un tostada</Text>
             <Entypo name="dots-three-horizontal" size={24} color="black" />
           </View>
 
@@ -47,63 +47,73 @@ const Detalle = () => {
           </View>
         </View>
 
-        {/* <View style={styles.Ima}>
-          <Image
-            style={styles.Image}
-            source={require("../Image/Imagen2.jpg")}
-          />
-          <View style={styles.Hexagram}>
-            <MaterialCommunityIcons name="hexagram" style={styles.Hexagram1} />
-            <Text style={styles.Hexagram1}>4,5</Text>
+        <View style={styles.reseta}>
+          <View>
+            <Image
+              source={require("../Image/Imagen2.jpg")}
+              style={styles.img}
+            />
+            <View style={styles.bgfavorite}>
+              <Fontisto name="favorite" style={styles.favorite} />
+            </View>
+            <Text style={styles.str}>
+              <Entypo name="star" size={25} color="white" />
+              4.4
+            </Text>
+            <Text style={styles.time}>5:10</Text>
+            <View style={styles.bgplay}>
+              <Fontisto name="play" style={styles.play} />
+            </View>
           </View>
-        </View>
+          <View style={styles.end}>
+            <Text style={styles.text}>How to make sushi at home</Text>
+            <Entypo name="dots-three-horizontal" size={24} color="black" />
+          </View>
 
-        <View style={styles.Description}>
-          <Text style={styles.Description1}>How to make sushi at home</Text>
-          <MaterialCommunityIcons
-            name="dots-horizontal"
-            style={styles.DotsHorizontal1}
-          />
-        </View>
-
-        <View style={styles.Images}>
-          <Image
-            style={styles.Images1}
+          <View style={styles.user}>
+            <Image
             source={{
               uri: "https://st2.depositphotos.com/20363444/i/600/depositphotos_442183986-stock-photo-stylish-woman-headscarf-adjusting-sunglasses.jpg",
             }}
-          />
-          <Text style={styles.Users}>By Nicki Samantha</Text>
-        </View>
-
-        <View style={styles.Ima}>
-          <Image
-            style={styles.Image}
-            source={require("../Image/Imagen3.jpeg")}
-          />
-          <View style={styles.Hexagram}>
-            <MaterialCommunityIcons name="hexagram" style={styles.Hexagram1} />
-            <Text style={styles.Hexagram1}>4,9</Text>
+              style={styles.userImg}
+            />
+            <Text style={styles.textUser}>By Niki Samanta</Text>
           </View>
         </View>
+        <View style={styles.reseta}>
+          <View>
+            <Image
+              source={require("../Image/Imagen3.jpeg")}
+              style={styles.img}
+            />
+            <View style={styles.bgfavorite}>
+              <Fontisto name="favorite" style={styles.favorite} />
+            </View>
+            <Text style={styles.str}>
+              <Entypo name="star" size={25} color="white" />
+              4.4
+            </Text>
+            <Text style={styles.time}>5:10</Text>
+            <View style={styles.bgplay}>
+              <Fontisto name="play" style={styles.play} />
+            </View>
+          </View>
+          <View style={styles.end}>
+            <Text style={styles.text}>Indonesian 
+chiken burger</Text>
+            <Entypo name="dots-three-horizontal" size={24} color="black" />
+          </View>
 
-        <View style={styles.Description}>
-          <Text style={styles.Description1}>How to make sushi at home</Text>
-          <MaterialCommunityIcons
-            name="dots-horizontal"
-            style={styles.DotsHorizontal2}
-          />
-        </View>
-
-        <View style={styles.Images}>
-          <Image
-            style={styles.Images1}
+          <View style={styles.user}>
+            <Image
             source={{
               uri: "https://img.freepik.com/foto-gratis/retrato-modelo-sonriente-hermoso-hombre-negocios-inconformista-que-lleva-ropa-blanca-casual-verano_158538-919.jpg?w=2000",
             }}
-          />
-          <Text style={styles.Users}>By James Wolden</Text>
-        </View> */}
+              style={styles.userImg}
+            />
+            <Text style={styles.textUser}>By James Wolden</Text>
+          </View>
+        </View>
       </View>
     </ScrollView>
   );
@@ -142,6 +152,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   reseta: {
+    marginTop:12,
   },
   bgplay: {
     borderRadius: 50,
