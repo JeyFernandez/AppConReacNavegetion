@@ -1,251 +1,224 @@
-import React from 'react';
-import { StatusBar } from "expo-status-bar";
-import { ScrollView, StyleSheet, Text, View, Image, } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-
+import React from "react";
+import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
+import { MaterialCommunityIcons, Fontisto, Entypo } from "@expo/vector-icons";
 
 const Detalle = () => {
-    return (
-        <ScrollView>
-          <StatusBar
-animated={true}
-backgroundColor='white' />
-            <View>
-                <Text style={styles.SaveRecipes}>Recetas guardadas</Text>
+  return (
+    <ScrollView>
+         <Text style={styles.SaveRecipes}>Recetas guardadas</Text>
+      <View style={styles.container}>
 
-                <View style={styles.TextVideo}>
-                    <Text style={styles.TextVideo1}>
-                        Video
-                    </Text>
-                    <Text style={styles.TextRecipe}>
-                        Recipe
-                    </Text>
-                </View>
+        <View style={styles.TextVideo}>
+          <Text style={styles.TextVideo1}>Video</Text>
+          <Text style={styles.TextRecipe}>Recipe</Text>
+        </View>
 
-                <View style={styles.Ima}>
-                    <Image
-                        style={styles.Image}
-                        source={require('../Image/Imagen1.jpg')}
-                    />
-                    <View style={styles.Hexagram}>
-                        <MaterialCommunityIcons
-                            name="hexagram"
-                            style={styles.Hexagram1}
-                        />
-                        <View style={styles.BookOutline}>
-                            <MaterialCommunityIcons
-                                name="book-outline"
-                                style={styles.BookOutline1}
-                            />
-                        </View>
-                        <Text style={styles.Hexagram1}>
-                            5,0
-                        </Text>
-                        
-
-                    </View>
-                </View>
-
-                <View style={styles.Description}>
-                    <Text style={styles.Description1}>Como hacer una tostada</Text>
-                    <MaterialCommunityIcons
-                        name="dots-horizontal"
-                        style={styles.DotsHorizontal}
-                    />
-                </View>
-
-                <View style={styles.Images}>
-                    <Image
-                        style={styles.Images1}
-                        source={{
-                            uri: "https://st3.depositphotos.com/28476324/31821/i/600/depositphotos_318216690-stock-photo-sexy-stylish-brunette-woman-in.jpg"
-                        }}
-                    />
-                    <Text style={styles.Users}>By Roberta Anny</Text>
-                </View>
-
-                <View style={styles.Ima}>
-                    <Image
-                        style={styles.Image}
-                        source={require('../Image/Imagen2.jpg')}
-                    />
-                    <View style={styles.Hexagram}>
-                        <MaterialCommunityIcons
-                            name="hexagram"
-                            style={styles.Hexagram1}
-                        />
-                        <Text style={styles.Hexagram1}>
-                            4,5
-                        </Text>
-                    </View>
-                </View>
-
-                <View style={styles.Description}>
-                    <Text style={styles.Description1}>How to make sushi at home</Text>
-                    <MaterialCommunityIcons
-                        name="dots-horizontal"
-                        style={styles.DotsHorizontal1}
-                    />
-                </View>
-
-                <View style={styles.Images}>
-                    <Image
-                        style={styles.Images1}
-                        source={{
-                            uri: "https://st2.depositphotos.com/20363444/i/600/depositphotos_442183986-stock-photo-stylish-woman-headscarf-adjusting-sunglasses.jpg"
-                        }}
-                    />
-                    <Text style={styles.Users}>By Nicki Samantha</Text>
-                </View>
-
-                <View style={styles.Ima}>
-                    <Image
-                        style={styles.Image}
-                        source={require('../Image/Imagen3.jpeg')}
-                    />
-                    <View style={styles.Hexagram}>
-                        <MaterialCommunityIcons
-                            name="hexagram"
-                            style={styles.Hexagram1}
-                        />
-                        <Text style={styles.Hexagram1}>
-                            4,9
-                        </Text>
-                    </View>
-                </View>
-
-                <View style={styles.Description}>
-                    <Text style={styles.Description1}>How to make sushi at home</Text>
-                    <MaterialCommunityIcons
-                        name="dots-horizontal"
-                        style={styles.DotsHorizontal2}
-                    />
-                </View>
-
-                <View style={styles.Images}>
-                    <Image
-                        style={styles.Images1}
-                        source={{
-                            uri: "https://img.freepik.com/foto-gratis/retrato-modelo-sonriente-hermoso-hombre-negocios-inconformista-que-lleva-ropa-blanca-casual-verano_158538-919.jpg?w=2000"
-                        }}
-                    />
-                    <Text style={styles.Users}>By James Wolden</Text>
-                </View>
+        <View style={styles.reseta}>
+          <View>
+            <Image
+              source={require('../Image/Imagen1.jpg')}
+              style={styles.img}
+            />
+            <View style={styles.bgfavorite}>
+              <Fontisto name="favorite" style={styles.favorite} />
             </View>
+            <Text style={styles.str}>
+              <Entypo name="star" size={25} color="white" />
+              4.4
+            </Text>
+            <Text style={styles.time}>5:10</Text>
+            <View style={styles.bgplay}>
+              <Fontisto name="play" style={styles.play} />
+            </View>
+          </View>
+          <View style={styles.end}>
+            <Text style={styles.text}>How to make sushi at home</Text>
+            <Entypo name="dots-three-horizontal" size={24} color="black" />
+          </View>
 
-        </ScrollView>
-    )
-}
+          <View style={styles.user}>
+            <Image
+              source={{
+                uri: "https://c4.wallpaperflare.com/wallpaper/264/180/931/alessandro-di-cicco-women-model-long-hair-wallpaper-preview.jpg",
+              }}
+              style={styles.userImg}
+            />
+            <Text style={styles.textUser}>By Alexandra Contreras</Text>
+          </View>
+        </View>
+
+        {/* <View style={styles.Ima}>
+          <Image
+            style={styles.Image}
+            source={require("../Image/Imagen2.jpg")}
+          />
+          <View style={styles.Hexagram}>
+            <MaterialCommunityIcons name="hexagram" style={styles.Hexagram1} />
+            <Text style={styles.Hexagram1}>4,5</Text>
+          </View>
+        </View>
+
+        <View style={styles.Description}>
+          <Text style={styles.Description1}>How to make sushi at home</Text>
+          <MaterialCommunityIcons
+            name="dots-horizontal"
+            style={styles.DotsHorizontal1}
+          />
+        </View>
+
+        <View style={styles.Images}>
+          <Image
+            style={styles.Images1}
+            source={{
+              uri: "https://st2.depositphotos.com/20363444/i/600/depositphotos_442183986-stock-photo-stylish-woman-headscarf-adjusting-sunglasses.jpg",
+            }}
+          />
+          <Text style={styles.Users}>By Nicki Samantha</Text>
+        </View>
+
+        <View style={styles.Ima}>
+          <Image
+            style={styles.Image}
+            source={require("../Image/Imagen3.jpeg")}
+          />
+          <View style={styles.Hexagram}>
+            <MaterialCommunityIcons name="hexagram" style={styles.Hexagram1} />
+            <Text style={styles.Hexagram1}>4,9</Text>
+          </View>
+        </View>
+
+        <View style={styles.Description}>
+          <Text style={styles.Description1}>How to make sushi at home</Text>
+          <MaterialCommunityIcons
+            name="dots-horizontal"
+            style={styles.DotsHorizontal2}
+          />
+        </View>
+
+        <View style={styles.Images}>
+          <Image
+            style={styles.Images1}
+            source={{
+              uri: "https://img.freepik.com/foto-gratis/retrato-modelo-sonriente-hermoso-hombre-negocios-inconformista-que-lleva-ropa-blanca-casual-verano_158538-919.jpg?w=2000",
+            }}
+          />
+          <Text style={styles.Users}>By James Wolden</Text>
+        </View> */}
+      </View>
+    </ScrollView>
+  );
+};
 export default Detalle;
 
 const styles = StyleSheet.create({
-    Container: {
+  container: {    
+    margin: 20,
+  },
+  SaveRecipes: {
+    marginLeft:20,
+    marginTop: 40,
+    fontSize: 25,
+    fontWeight: "bold",
+  },
+  TextVideo: {
+    flexDirection: "row",
+    marginVertical: 20,
+  },
+  TextVideo1: {
+    backgroundColor: "#E23E3E",
+    color: "white",
+    fontSize: 18,
+    borderRadius: 12,
+    paddingHorizontal: "20%",
+    padding: 10,
+    textAlign: "center",
+  },
+  TextRecipe: {
+    color: "#E23E3E",
+    fontSize: 18,
+    borderRadius: 12,
+    paddingHorizontal: "20%",
+    padding: 10,
+    textAlign: "center",
+  },
+  reseta: {
+  },
+  bgplay: {
+    borderRadius: 50,
+    padding: 23,
+    backgroundColor: "rgba(25, 20, 20, 0.5)",
+    position: "absolute",
+    left: '42%',
+    top: 60,
+  },
+  bgfavorite: {
+    borderRadius: 50,
+    backgroundColor: "rgb(250,250,250)",
+    position: "absolute",
+    left: '85%',
+    top: 10,
+  },
+  play: {
+    fontSize: 20,
+    color: "white",
+  },
+  favorite: {
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    fontSize: 20,
+    color: "black",
+  },
+  str: {
+    fontSize: 20,
+    color: "white",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(25,25,20,0.5)",
+    width: 60,
+    filter: 0,
+    borderRadius: 8,
+    padding: 2,
+    position: "absolute",
+    left: '5%',
+    top: 10,
+  },
+  time: {
+    fontSize: 20,
+    color: "white",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(20, 20, 20,0.4)",
+    borderRadius: 8,
+    paddingVertical: 2,
+    paddingHorizontal: 10,
+    position: "absolute",
+    left:'85%',
+    top: 160,
+  },
+  end: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  text: {
+    fontSize: 20,
+  },
 
-    },
-    SaveRecipes: {
-        fontSize: 25,
-        fontWeight: 'bold',
-        marginStart: 20,
-        margin: 15,
-    },
-    TextVideo: {
-        flex: 1,
-        flexDirection: 'row',
-        backgroundColor: '#E23E3E',
-        height: 35,
-        width: 90,
-        borderRadius: 10,
-        marginStart: 20,
-        margin: 13,
-    },
-    TextVideo1: {
-        color: 'white',
-        fontSize: 15,
-        padding: 5,
-        textAlign: 'center',
-    },
-    TextRecipe: {
-        color: '#EE8B8B',
-        fontSize: 15,
-        marginLeft: 100,
-        padding: 5,
-    },
-    Video: {
-        margin: 10,
-    },
-    Hexagram: {
-        flexDirection: 'row',
-        backgroundColor: '#2C3D5A',
-        position: 'absolute',
-        borderRadius: 8,
-        height: 20,
-        width: 50,
-        margin: 10,
-        marginStart: 25,
-    },
-    Hexagram1: {
-        fontSize: 15,
-        color: 'white',
-    },
-    BookOutline: {
-        flex: 1,
-        backgroundColor: '#ffff',
-        borderRadius: 15,
-        height: 16,
-        width: 60,
-    },
-    BookOutline1: {
-        color: '#E65656',
-        fontSize: 12,
-    },
-    Ima: {
-        marginStart: 20,
-    },
-    Image: {
-        width: '90%',
-        height: 190,
-        borderRadius: 8,
-        margin: 5,
-    },
-    Description: {
-        flexDirection: 'row',
-        flex: 1,
-    },
-    Description1: {
-        paddingStart: 25,
-        fontSize: 15,
-        fontWeight: 'bold',
-        color: '#white'
-    },
-    DotsHorizontal: {
-        fontSize: 28,
-        marginLeft: '37%',
-
-    },
-    DotsHorizontal1: {
-        fontSize: 28,
-        marginLeft: '31%',
-
-    },
-    DotsHorizontal2: {
-        fontSize: 28,
-        marginLeft: '31%',
-
-    },
-    Images: {
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginLeft: 10,
-    },
-    Images1: {
-        margin: 13,
-        width: 60,
-        height: 60,
-        borderRadius:30
-    },
-    Users: {
-        fontSize: 15,
-        color: '#ACACAC',
-    }
-})
+  img: {
+    width:'100%',
+    height: 200,
+    borderRadius: 10,
+  },
+  user: {
+    flexDirection: "row",
+  },
+  userImg: {
+    width: 40,
+    height: 40,
+    borderRadius: 50,
+  },
+  textUser: {
+    color: "#AAAAAA",
+    margin: 10,
+    fontSize: 18,
+  },
+});

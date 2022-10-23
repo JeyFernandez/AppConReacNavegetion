@@ -8,7 +8,7 @@ import Perfil from "./screen/Perfil";
 import Add from "./screen/Add";
 import Guardadas from "./screen/Guardadas";
 import Detalle from "./screen/Detalle";
-import { AntDesign,MaterialIcons, Feather, Ionicons  } from '@expo/vector-icons';
+import { AntDesign,MaterialCommunityIcons, Feather, Ionicons  } from '@expo/vector-icons';
 
 const tab = createBottomTabNavigator ();
 function Mytab() {
@@ -36,7 +36,7 @@ function Mytab() {
             component={Detalle}
             options={{
                 tabBarIcon: ({color}) => (
-                    <MaterialIcons name="description" size={26} color={color} />
+                    <MaterialCommunityIcons name="book-outline" size={26} color={color} />
                 ),
                 headerShown: false
              }}
