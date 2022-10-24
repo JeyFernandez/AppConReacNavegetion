@@ -9,7 +9,11 @@ import perfilcomponent from "./components/perfilcomponent";
 import Add from "./screen/Add";
 import Guardadas from "./screen/Guardadas";
 import Detalle from "./screen/Detalle";
+<<<<<<< HEAD
 import { AntDesign, MaterialIcons, Feather, Ionicons } from '@expo/vector-icons';
+=======
+import { AntDesign,MaterialCommunityIcons, Feather, Ionicons  } from '@expo/vector-icons';
+>>>>>>> f52e1ea2e1afaf552a7fcf5899f7735f4ec33249
 
 const tab = createBottomTabNavigator();
 function Mytab() {
@@ -23,6 +27,7 @@ function Mytab() {
             }}
         >
             <tab.Screen
+<<<<<<< HEAD
                 name="Home"
                 component={Home}
                 options={{
@@ -31,6 +36,26 @@ function Mytab() {
                     ),
                     headerShown: false
                 }}
+=======
+             name="Home" 
+             component={Home}
+             options={{
+                tabBarIcon: ({color}) => (
+                    <AntDesign name="home" size={26} color={color} />
+                ),
+                headerShown: false
+             }}
+             />
+            <tab.Screen 
+            name="Detalle" 
+            component={Detalle}
+            options={{
+                tabBarIcon: ({color}) => (
+                    <MaterialCommunityIcons name="book-outline" size={26} color={color} />
+                ),
+                headerShown: false
+             }}
+>>>>>>> f52e1ea2e1afaf552a7fcf5899f7735f4ec33249
             />
             <tab.Screen
                 name="Detalle"

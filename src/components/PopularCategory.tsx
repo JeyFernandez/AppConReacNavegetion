@@ -5,12 +5,17 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+<<<<<<< HEAD
 import Category from "./Category";
 import perfilcomponent from '../components/Category'
+=======
+import Category from "./Category";  
+>>>>>>> f52e1ea2e1afaf552a7fcf5899f7735f4ec33249
 function Popular() {
   return (
     <View style={{ marginLeft: 20 }}>
       <ScrollView horizontal={true}>
+      <View>
         <View style={{ marginTop: 20, flexDirection: "row" }}>
           <TouchableOpacity>
             <Text style={styles.stylebutton}>Salad</Text>
@@ -28,11 +33,10 @@ function Popular() {
             <Text style={styles.stylebutton}>Lun</Text>
           </TouchableOpacity>
         </View>
-      </ScrollView>
-      <View>
           <Category/>
           
         </View>
+      </ScrollView>
     </View>
   );
 }

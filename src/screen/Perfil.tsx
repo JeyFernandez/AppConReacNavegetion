@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { Entypo, } from "@expo/vector-icons";
 import PerfilComponets from "../components/PerfilComponets";
 
 
 
+=======
+import {View,Text } from 'react-native';
+>>>>>>> f52e1ea2e1afaf552a7fcf5899f7735f4ec33249
 export default function Perfil() {
   return (
     <ScrollView>

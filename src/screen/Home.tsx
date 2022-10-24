@@ -3,11 +3,13 @@ import { StyleSheet, Text, View,ScrollView } from "react-native";
 import Input from "../components/Imput";
 import HomeComponets from "../components/ComponetsHome";
 import Popular from "../components/PopularCategory";
+import ResientesHome from "../components/RecientesHome";
+import CreadoresPopulares from "../components/CreadoresPopulares";
 export default function Home() {
   return (
     <View style={styles.containerNav}>
       <ScrollView>
-      <StatusBar
+      <StatusBar 
         animated={true}
         backgroundColor='white' />
       <View >
@@ -19,6 +21,8 @@ export default function Home() {
       <HomeComponets />
       <Text style={styles.title1}>Categoria Popular</Text>
       <Popular/>
+      <ResientesHome/>
+      <CreadoresPopulares/>
       </View>
       </ScrollView>
     </View>
