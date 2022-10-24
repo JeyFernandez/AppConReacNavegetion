@@ -1,88 +1,94 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { Entypo, } from "@expo/vector-icons";
-
+import PerfilComponets from "../components/PerfilComponets";
 
 
 
 export default function Perfil() {
   return (
-    <View style={styles.princpal}>
-
-      <View style={styles.principal1}>
-        <Text style={styles.Profile}>
-          Mi Perfil
-          <Entypo name="dots-three-horizontal" size={24} color="black" />
-        </Text>
-
-      </View>
-
-      <View style={styles.Profile1}>
-        <Image
-          style={styles.imgProfile}
-          source={{
-            uri: "https://images6.alphacoders.com/126/1260492.png",
-          }}
-        />
-        <View style={styles.edit}>
-          <TouchableOpacity>
-            <Text style={styles.edit1}>Edit Profile</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-
-
-      <Text style={styles.Profile}>Fredys Cubas</Text>
-
-      <View style={styles.text1}>
-        <Text style={styles.text1}>Hola buenas tardes mi nombre es Freddy cubas
-          Un gusto conocerlos</Text>
-
-
-      </View>
-      <View style={styles.text2}>
-
-        <View>
-          <Text style={styles.text1}>Recipe</Text>
-          <Text style={styles.text3}> 3</Text>
-        </View>
-
-        <View>
-          <Text style={styles.text1}>Videos</Text>
-          <Text style={styles.text3}> 13</Text>
-        </View>
-
-        <View>
-          <Text style={styles.text1}>Followers</Text>
-          <Text style={styles.text3}> 14K</Text>
-        </View>
-
-        <View>
-          <Text style={styles.text1}>Followin</Text>
-          <Text style={styles.text3}> 120</Text>
-        </View>
-      </View>
-
-      <View style={styles.Buttons}>
-        <TouchableOpacity>
-          <View>
-            <Text style={styles.text4}>Video</Text>
+    <ScrollView>
+      <View>
+        <View style={styles.principal1}>
+          <Text style={styles.Profile}>
+            Mi Perfil
+          </Text>
+          <View style={styles.principal2}>
+            <Entypo name="dots-three-horizontal" size={24} color="black" />
           </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
+        </View>
+
+        <View style={styles.Profil}>
+          <Image
+            style={styles.imgProfile}
+            source={{
+              uri: "https://images6.alphacoders.com/126/1260492.png",
+            }}
+          />
+          <View style={styles.edit}>
+            <TouchableOpacity>
+              <Text style={styles.edit1}>Edit Profile</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <Text style={styles.Profile3}>Michell Luna</Text>
+
+        <View style={styles.text1}>
+          <Text style={styles.text1}>Hola buenas tardes mi nombre es Freddy cubas
+            Un gusto conocerlos</Text>
+
+
+        </View>
+        <View style={styles.text2}>
 
           <View>
-            <Text style={styles.text5}>Recipe</Text>
+            <Text style={styles.text1}>Recipe</Text>
+            <Text style={styles.text3}> 3</Text>
           </View>
-        </TouchableOpacity>
-        <View>
-         
+
+          <View>
+            <Text style={styles.text1}>Videos</Text>
+            <Text style={styles.text3}> 13</Text>
+          </View>
+
+          <View>
+            <Text style={styles.text1}>Followers</Text>
+            <Text style={styles.text3}> 14K</Text>
+          </View>
+
+          <View>
+            <Text style={styles.text1}>Followin</Text>
+            <Text style={styles.text3}> 120</Text>
+          </View>
         </View>
-        
+
+        <View style={styles.Buttons0}>
+          <View style={styles.Buttons}>
+            <TouchableOpacity>
+              <View>
+                <Text style={styles.text4}>Video</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+
+              <View>
+                <Text style={styles.text5}>Recipe</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <PerfilComponets />
       </View>
-    </View>
+
+    </ScrollView>
+
   );
 }
 const styles = StyleSheet.create({
+  principal2: {
+    position: 'absolute',
+    marginLeft: '80%',
+    marginTop: 15,
+  },
   vista: {
     backgroundColor: "gray",
     height: "700",
@@ -94,11 +100,6 @@ const styles = StyleSheet.create({
 
   },
 
-  princpal: {
-    justifyContent: 'space-between',
-    height: "2000",
-  },
-
   Profile: {
     fontSize: 25,
     fontWeight: "bold",
@@ -106,6 +107,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     flexDirection: 'row',
     justifyContent: "space-between",
+    left: 30,
   },
 
   Profile1: {
@@ -113,6 +115,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: "space-between",
 
+  },
+
+  Profile3: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginLeft: 20,
+    marginTop: 10,
+    flexDirection: 'row',
+    justifyContent: "space-between",
+    left: 30,
   },
 
   Profile2: {
@@ -125,7 +137,7 @@ const styles = StyleSheet.create({
 
   principal1: {
     flexDirection: 'row',
-    justifyContent: "space-between",
+
   },
 
   imgProfile: {
@@ -136,20 +148,20 @@ const styles = StyleSheet.create({
   },
 
   edit: {
-
-    marginRight: "5%",
     marginTop: 40,
+    marginRight: "12%",
+    height: 33,
+    width: '10%',
+    borderRadius: 5,
+    borderStyle: 'solid 1px',
+    borderColor: '#000'
+   
+    
   },
 
   edit1: {
     textAlign: "center",
     fontSize: 20,
-    paddingVertical: 5,
-    paddingHorizontal: 20,
-    backgroundColor: '#ffff',
-    borderRadius: 10,
-    borderwidth: 10,
-
   },
 
   text1: {
@@ -178,12 +190,17 @@ const styles = StyleSheet.create({
   },
 
   Buttons: {
+    justifyContent: 'space-between',
     marginTop: 20,
-    paddingBottom: '100%',
-    justifyContent: "center",
+    marginLeft: '30%',
+    marginRight: '40%',
     flexDirection: "row",
+  },
 
-
+  Buttons0: {
+    justifyContent: 'center',
+    marginTop: 20,
+    flexDirection: "row",
   },
 
   text4: {
